@@ -1,0 +1,132 @@
+% !BIB program = biber
+
+\documentclass[12pt]{article}
+\usepackage{biblatex}
+\bibliography{ann-bib}
+\newcommand*{\citeSK}[1]{
+	\noindent
+	\cite{#1} 
+	\fullcite{#1} 
+% 	\citeauthor{#1}: 
+% 	\citetitle{#1} (\citeyear{#1})
+% 		\begin{quote}
+% 		\citefield{#1}{annotation} 
+% 		\end{quote}
+% 	\begin{quote}
+% 	{\bf Cites}: \citefield{#1}{verba}. 
+% 	\citefield{#1}{annotation} 
+% 	\cite{#1} 
+% 	\end{quote}
+}
+\newcommand*{\citeSKextended}[2]{ % #2 = for "Ch. 5", and similar
+	\noindent
+	\cite{#1} 
+	\citeauthor{#1}: 
+	\citetitle{#1} (\citeyear{#1}) {#2}
+% 	\begin{quote}
+% 	{\bf Cites}: \citefield{#1}{verba}. 
+% 	\citefield{#1}{annotation} 
+% 	\cite{#1} 
+% 	\end{quote}
+}
+
+
+\begin{document}
+
+\begin{center}
+
+        School of Interactive Arts and Technology\\
+        Simon Fraser University
+        
+        \bigskip
+        \bigskip
+        \bigskip
+        \bigskip
+        
+        {\Large\textbf{An Annotated Bibliography}}
+        \medskip
+
+        {\large   Created by: Arefin Mohiuddin
+%       
+%               \medskip
+%       
+%               Last modification on: \today
+        }
+        
+        \bigskip
+        \bigskip
+        \bigskip
+        \bigskip
+        
+        \begin{center}
+        Supervisory committee:\\
+        Senior Supervisor: Dr. Robert Woodbury\\
+        Supervisor: Dr. Halil Erhan\\
+        Supervisor: Dr. Wolfgang Stuerzlinger
+        \end{center}
+\end{center}
+
+
+\newpage
+\tableofcontents
+
+    \citeSK{lunzer2008subjunctive}
+    		\begin{quote}
+    		\small
+    		In this paper, authors propose a novel {\em subjunctive} interface 
+    		and report experimental results after evaluating the same.
+    		In subjunctive interfaces, GUI elements can assume multiple states simultaneously 
+    		(Fig. \ref{fig:lunzer2008subjunctive}).
+    		Experimental results indicate higher user satisfaction,
+    		and shorter (up to 27\%) task completion times.
+    		\begin{figure}[htb]
+    		\begin{center}
+    		\includegraphics[width=2in]{figures/lunzer2008subjunctive.jpg}
+    		\caption{Subjunctive interface as suggested by Lunzer and Hornb{\ae}k \cite{lunzer2008subjunctive}.}
+    		\label{fig:lunzer2008subjunctive}
+    		\end{center}
+    		\end{figure}
+    		\end{quote}
+% \newpage
+% \section*{About}
+% This document contains a bibliography that includes descriptive and evaluative comments (annotations) about the 
+% sources cited.
+% 
+% Count of references by type:
+% \begin{itemize}
+% \item Books: 19
+% \item Articles: 49
+% \item Other: 35
+% \end{itemize}
+% 
+% \bigskip
+% 
+% \begin{flushright}
+% Arefin Mohiuddin, Fall 2018
+% \end{flushright}
+% % Each entry also contains its count of cites, as listed in Google Scholar
+% % during the February-April 2012 period, to give a further indication of its relevance.
+
+
+
+
+%\newpage
+%\afterpage{\clearpage}
+\clearpage
+\newpage
+\newpage
+\printbibliography %[title={References Sorted by First Author}]
+
+% \newpage
+% \printbibliography[type=book,title={List of Books}]
+% 
+% \newpage
+% \printbibliography[type=article,title={List of Articles}]
+
+%\nocite{*}
+%\bibliographystyle{plain-annote} 
+%\bibliographystyle{apsr-annote}
+%\bibliographystyle{apsr2001-annote}
+%\bibliography{ann-bib}
+
+\end{document}

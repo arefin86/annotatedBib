@@ -1,0 +1,977 @@
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\section{Depth}
+
+\subsection{Computing and Design Alternatives}
+
+		\citeSK{marks1997design}
+		\begin{quote}
+		\small
+		An approach to 
+		1) compute a large number of computationally-expensive graphics,
+		2) summarize subjective qualities of each of these graphics as an (objective) output vector, and
+		3) present these graphics through some \emph{arrangement method} (Fig. \ref{fig:marks1997design}).
+		The so-called \emph{dispersion method} picks input vectors so that output vectors (and thus
+		output graphics) are well-distributed. Output vectors have \emph{distance metric} which is used
+		to summarize subjectively relevant qualities of output graphics. 
+		The method presented was applied to three different cases:
+		image rendering using raytracing,
+		volume rendering, and
+		motion control.
+		
+		\begin{figure}[h!]
+		\centering
+		\begin{tikzpicture}
+		  [
+		  scale=1.0,
+		  ]
+		  
+		  %\draw [help lines] (0,0) grid (10,4);
+			
+		% 	\tikz\draw (0,0) ellipse (20pt and 28pt);
+		% 	\tikz\draw (4,0) ellipse (20pt and 28pt);
+		% 	\tikz\draw (8,0) ellipse (20pt and 28pt);
+			%\draw (0,0) node[ellipse, minimum height=2cm,minimum width=3cm,draw] {Ellipse};
+			%\path (0,0)  node(a) [ellipse,rotate=0,draw,fill]    {An ellipse}
+			
+			\draw (0,0) circle [x radius=0.5, y radius=1.5];
+			\node (IV) at (0,2) {\small set of input vectors};
+		
+			\draw (4,0) circle [x radius=0.5, y radius=1.5];
+			\node (OG) at (4,2) {\small set of output graphics};
+			
+			\draw (8,0) circle [x radius=0.5, y radius=1.5];
+			\node (OV) at (8,2) {\small set of output vectors};
+			
+			\draw[->, >=triangle 45] (1,0) -- (3,0) node[near start, above] {\small \ \ \ \ mapping 1:1};
+		
+			\draw[->, >=triangle 45] (5,0) -- (7,0) node[near start, above] {\small \ \ \ \ ``summary'' 1:1};
+			%\node[near start, below] at (7,0) {\small mapping};
+			
+			\node (OVmetric) at (8, -2) {\small has distance metric $d$};
+			
+			\node (OG1) at (4, -2) {\small has arrangement};
+			\node (OG1) at (4, -2.5) {\small (makes use of $d$)};
+			
+			\node (OVmetric) at (0, -2) {\small has dispersion method};
+			
+			\draw (current bounding box.north east) rectangle (current bounding box.south west);
+				
+		\end{tikzpicture}
+		
+		\caption{A graphical summary of most important concepts in Design Galleries by Marks et al \cite{marks1997design}.}
+		\label{fig:marks1997design}
+		\end{figure}
+		
+		\end{quote}
+
+
+
+\citeSK{marks1997designbrowsers}
+		\begin{quote}
+		\small
+		The authors describe and showcase several browsers (i.e. browsing modalities) 
+		for Design Galleries \cite{marks1997design},
+		both 2D and 3D (Fig. \ref{fig:marks1997designbrowsers}). The 3D version
+		is in some aspects more usable than the 2D version (for example, providing some
+		insights that the 2D version cannot provide).
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=3in]{figures/marks1997designbrowsers.jpg}
+		\caption{3D browser for Design Galleries \cite{marks1997designbrowsers}.}
+		\label{fig:marks1997designbrowsers}
+		\end{center}
+		\end{figure}				
+		\end{quote}
+
+\citeSK{roberts2000multiple}
+		\begin{quote}
+		\small
+		Describes {\em multiplicity} in visualization, 
+		where data are shown in separate windows (Fig. \ref{fig:roberts2000multiple}).
+		The authors lists five reasons for using multiple views: 
+		correct dissemination,
+		scientific exploration,
+		alternative viewpoints,
+		realization comparison, and
+		collaboration.
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=4in]{figures/roberts2000multiple.jpg}
+		\caption{Multiplicity in visualization \cite{roberts2000multiple}.}
+		\label{fig:roberts2000multiple}
+		\end{center}
+		\end{figure}
+		\end{quote}
+		
+\citeSK{jankun2000spreadsheet}
+		\begin{quote}
+		\small
+		The authors present a spreadsheet-like interface for exploring and displaying multidimensional 
+		parameter spaces and their associated visualizations (Fig. \ref{fig:jankun2000spreadsheet}). 
+		The visualizations themselves (i.e. output graphics) are organized in a two-dimensional tabular form.
+		Axes (X, Y) show values for two parameters, at a time, while the rest of the parameters take on
+		their default values.
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=4in]{figures/jankun2000spreadsheet.jpg}
+		\caption{Spreadsheet-like interface \cite{jankun2000spreadsheet}.}
+		\label{fig:jankun2000spreadsheet}
+		\end{center}
+		\end{figure}
+		\end{quote}
+
+%\citeSK{derthick2001enhancing} \\
+
+
+\citeSK{terry2002recognizing}
+		\begin{quote}
+		\small
+		Analyzing three case studies related to image manipulation, 
+		%(image toning, user interface design, and pen drawing coloring), 
+		and arguing that computer systems need to better support creative processes, 
+		authors present a set of general user interface design guidelines which would allow the user to 
+		1) \emph{experiment} with commands, 
+		2) \emph{generate and explore variations} of document components, and
+		3) \emph{evaluate document states}.
+		\end{quote}
+
+\citeSK{quigley2002semi}
+		\begin{quote}
+		\small
+% 		Generally it is very difficult to capture subjective aesthetic and functional criteria as
+% 		an objective (mathematical or computational) function. 
+		This paper presents a mixed-initiative
+		approach to antenna design, where computer is used to sample a space of possible antenna designs, and 
+		visualize these samples using a variant of Design Galleries (see Fig. \ref{fig:quigley2002semi}
+		and Marks et al \cite{marks1997design}); 
+		human input is then used to select samples according to some subjective criteria.
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=4in]{figures/quigley2002semi.jpg}
+		\caption{Antenna designs \cite{quigley2002semi}.}
+		\label{fig:quigley2002semi}
+		\end{center}
+		\end{figure}
+		\end{quote}
+		
+%\citeSK{stolte2002polaris}  \\
+
+\citeSK{stump2003design}
+		\begin{quote}
+		\small
+		Demonstrates a graphical user interface for visualizing complex design spaces,
+		containing rich sets of ``good'' designs. Supports generation, discovery,
+		comparison, selection and recombination of designs. The interface makes use of multi-dimensional
+		visualization techniques (glyph plots, parallel coordinates, linked views,
+		brushing, histograms, Pareto frontier) and interaction techniques (specifying lower and upper
+		bounds on the design space variables, assigning variables to glyph axes and parallel
+		coordinate plots, and brushing variables dynamically). An example of how to
+		use the interface is given (satellite design at Lockheed Martin).
+		\begin{figure}[htb]
+			\begin{center}
+			\includegraphics[width=0.99\textwidth]{figures/stump2003design.jpg}
+			%
+			\caption{Customizable glyphs for displaying multivariate information on designs (left), 
+			and designs on the Pareto frontier (right, dark spheres). 
+			\citeauthor{stump2003design}: 
+			\citetitle{stump2003design} 
+			\cite{stump2003design}.}
+			%
+			\label{fig:stump2003design}
+			\end{center}
+		\end{figure}
+		\end{quote}
+
+
+\citeSK{terry2004variation}
+		\begin{quote}
+		\small
+		The paper describes a general approach ({\em Parallel Paths}) 
+		to implementing user-initiated development of alternatives/variations for any given document.
+		It also presents a way to visualize and to work with a number of alternatives on the screen
+		({\em Parallel Pies}).
+		Possible problems with the approach:\\
+		- no word on storage requirements (space complexity) when copying the current document
+		  into a new alternative. For example, images can be very large.\\
+		- no word on copying just parts (of the document) into an alternative (and not only the whole
+		  document).\\
+		- Parallel Pies works well for several (2, 3, \dots) variations, but what if there are many more
+		  variations (for example, forty of them)? Slices in the pie probably become so 
+		  narrow as to make proper viewing of an alternative impossible.\\
+		- commands work on just one or all (1 or N) variations---what if we want to work with a subset
+		  of variations, for example half of them (N/2)?\\
+		- there is no need to copy the whole history when making an alternative; just adding/linking a new 
+		  node in the history tree/graph would probably be enough.
+		\end{quote}
+
+\citeSK{terry2005phdthesis}
+		\begin{quote}
+		\small
+		This thesis suggests easier ways 
+		to develop and explore entire {\em sets of alternative design
+		solutions}, i.e. a number of alternatives in parallel.
+		The author presents two software prototypes, 
+		{\em Side Views} (which applies a type of a tooltip mechanism, only showing the
+		effect of a command, and/or a series of previews across some range of values,
+		for each parameter in the command), and
+		{\em Parallel Pies} (a visualization/interaction modality which allows a user
+		to both visualize multiple alternatives on the same screen, and easily create
+		new alternatives). To evaluate the impact of these tools on problem solving,
+		the author conducts three studies (two controlled, and one think-aloud study).
+		Experimental results related to Parallel Pies indicate both negative effects
+		(use of Parallel Pies can lead to lower-quality results) and positive effects 
+		(users explore problems more broadly). 
+		Experimental results related to Side Views indicate 
+		either no effects (i.e. no change in user performance) or positive effects 
+		(easier discovery of unexpected/unplanned-for but still viable solutions).
+		\end{quote}
+
+%\citeSK{bavoil2005vistrails}  \\
+
+\citeSK{tohidi2006getting} 
+		\begin{quote}
+		\small
+		In this experimental study, authors used low-cost paper prototyping of three
+		different human-computer interfaces (Fig. \ref{fig:tohidi2006getting}) 
+		for a "house climate control system" (HCCS).
+		The participants (N=48) were then exposed to:\\
+		- one single interface (three groups of 12, one group for each interface), or\\
+		- all three interfaces (one group of 12).\\
+		Experimental results (between-subjects) support the following claims:\\
+		- single-design users were more reluctant to criticize the design presented to them.\\
+		- single-design users gave significantly higher rankings to a design.\\
+		- usability testing is a means to identify problems, not provide solutions.
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=0.99\textwidth]{figures/tohidi2006getting.jpg}
+		\caption{Three different GUI mockups \cite{tohidi2006getting}.}
+		\label{fig:tohidi2006getting}
+		\end{center}
+		\end{figure}
+		\end{quote}
+
+% \citeSK{jennings2007design}
+% 		\begin{quote}
+% 		\small
+% 		\end{quote}
+
+
+\citeSK{roberts2007state}
+		\begin{quote}
+		\small
+		The author argues that while much work has been done in the 
+		field of {\em coordinate and multiple views} (Fig. \ref{fig:roberts2007state}),
+		lots of work still has to be done, and 
+		that the emphasis of CMV is slowly shifting towards visual analytics (VA).
+		The author points out areas which need work, and several promising areas of future work.
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=0.6\textwidth]{figures/roberts2007state.jpg}
+		\caption{Multiple coordinated views \cite{roberts2007state}.}
+		\label{fig:roberts2007state}
+		\end{center}
+		\end{figure}
+		\end{quote}
+
+\citeSK{hartmann2008design}
+		\begin{quote}
+		\small
+		This paper describes editing and execution of multiple program variations 
+		{\em in parallel} (Fig. \ref{fig:hartmann2008design}).
+		The prototype they showcased ({\em Juxtapose}) is able both to support variations of source code(s),
+		and the parallel execution of runtime codes corresponding to these source codes.
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=0.99\textwidth]{figures/hartmann2008design.jpg}
+		\caption{Parallel code alternatives (left) and 
+		parallel executed codes (right), 
+		in \citeauthor{hartmann2008design}: 
+		\citetitle{hartmann2008design} 
+		\cite{hartmann2008design}.}
+		\label{fig:hartmann2008design}
+		\end{center}
+		\end{figure}
+		\end{quote}
+
+
+
+\citeSK{lunzer2008subjunctive}
+		\begin{quote}
+		\small
+		In this paper, authors propose a novel {\em subjunctive} interface 
+		and report experimental results after evaluating the same.
+		In subjunctive interfaces, GUI elements can assume multiple states simultaneously 
+		(Fig. \ref{fig:lunzer2008subjunctive}).
+		Experimental results indicate higher user satisfaction,
+		and shorter (up to 27\%) task completion times.
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=2in]{figures/lunzer2008subjunctive.jpg}
+		\caption{Subjunctive interface as suggested by Lunzer and Hornb{\ae}k \cite{lunzer2008subjunctive}.}
+		\label{fig:lunzer2008subjunctive}
+		\end{center}
+		\end{figure}
+		\end{quote}
+
+%\citeSK{heer2008graphical}  \\
+
+\citeSK{herring2009getting}
+		\begin{quote}
+		\small
+		The paper describes a field study of how expert designers (N=11) in web,
+		product and graphic design use {\em examples} in their work.
+		The method used was semi-structured interviews (done in designers' own offices,
+		in order to situate them in their usual working environment), with 16 questions focusing
+		on benefits and limitations of examples; example retrieval, storage and 
+		dissemination techniques. The recommendations by authors are: 
+		1) augment search to prevent fixation on a particular design,
+		2) improve capture and visualization of search results, 
+		3) integrate physical and digital sources of examples (e.g. by taking pictures),
+		4) help designers recall why they stored examples, and
+		5) encourage contributions of personal examples.		
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=3in]{figures/herring2009getting.jpg}
+		\caption{Examples in a design studio; 
+		in \citeauthor{herring2009getting}: \citetitle{herring2009getting} \cite{herring2009getting}.}
+		\label{fig:herring2009getting}
+		\end{center}
+		\end{figure}
+		\end{quote}
+
+\citeSK{schipper2009visual}
+		\begin{quote}
+		\small
+		The paper proposes several approaches to visual comparison of diagrams used in graphical modeling
+		of complex computer systems (Fig. \ref{fig:schipper2009visual}). 
+		The authors claim that it is possible, using these approaches, to compare even very large models, 
+		without missing critical details. The means used: 
+		structural comparisons,
+		colored side-by-side comparisons,
+		automatic layout,
+		navigation and 
+		folding.
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=3in]{figures/schipper2009visual.jpg}
+		\caption{Visual comparison of models in Schipper et al \cite{schipper2009visual}.}
+		\label{fig:schipper2009visual}
+		\end{center}
+		\end{figure}				
+		\end{quote}
+
+\citeSK{sheikholeslami2009mscthesis} 
+		\begin{quote}
+		\small
+		This thesis describes {\em hysterical spaces} based on 
+		Cartesian product of sets of parameter values altered by the user.
+		The author goes on to develop a mathematical formalism capturing the notion
+		of such spaces, as well as to suggest ways to interact with their elements. 
+		\end{quote}
+
+\citeSK{busking2010dynamic}
+		\begin{quote}
+		\small
+		The paper proposes a visualization application (Fig. \ref{fig:busking2010dynamic}) 
+		for visual exploration of
+		{\em shape spaces} (composed of points representing a 2D or 3D surface of objects), and 
+		{\em shape models} (statistical distributions of objects in shape spaces). Main
+		contributions of the article:\\
+		- strongly-linked multi-view approach to shape exploration,\\
+		- shape evolution view,\\
+		- high performance based on GPU computing.
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=2.5in]{figures/busking2010dynamic.jpg}
+		\caption{Exploration of shape spaces in Busking et al \cite{busking2010dynamic}.}
+		\label{fig:busking2010dynamic}
+		\end{center}
+		\end{figure}				
+		\end{quote}
+				
+\citeSK{dow2010parallel}
+		\begin{quote}
+		\small
+		In the context of Web banner advertisement design, this paper investigates what is 
+		better under time constraints --- parallel or serial prototyping?
+		Experimental results show that parallel prototyping outperformed serial prototyping
+		in all the measures used in the experiment. The conclusions of the study were that
+		parallel prototyping (i.e. simultaneous creation of multiple prototypes) 
+		gives better design results and more ideas, and that users
+		who applied it react more positively to design critique, as compared to serial
+		prototyping (which is basically equivalent to the iteration of one single design).
+		\end{quote}
+
+\citeSK{lee2010designing}
+		\begin{quote}
+		\small
+		This paper examines whether human-computer interfaces offering {\em interactive example galleries} 
+		help users to find inspirational examples which can then be modified to create new designs
+		({\em design by example modification}). To answer this question the authors developed 
+		a prototype web page editor ({\em Adaptive Ideas} --- see Fig. \ref{fig:lee2010designing}) 
+		and conducted
+		three different usability experiments whose results show that a body of examples
+		can improve design work.
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=3.5in]{figures/lee2010designing.jpg}
+		\caption{Lee et al \cite{lee2010designing} --- {\em Adaptive Ideas} prototype for interactive
+		example galleries.}
+		\label{fig:lee2010designing}
+		\end{center}
+		\end{figure}				
+		\end{quote}
+
+
+\citeSK{warth2011worlds} 
+		\begin{quote}
+		\small
+		The authors present an approach to isolating and controling side effects in programming languages,
+		by introducing {\em worlds}. A world acts as a sort of a sandbox containing all side effects 
+		(i.e. changes to some parts or all of program state), thus enabling easy experimentation. 
+		A new world can be {\em sprouted} from its originating world; side effects then take place in this
+		child world and stay contained within it, unless we explicitly propagate them to its parent world by 
+		executing a commit operation.
+		\end{quote}
+		
+\citeSK{chen2012phdthesis} 
+%\citeSKextended{chen2012phdthesis}{Chapter 6: Design of the Formalism}  \\
+		\begin{quote}
+		\small
+		This thesis presents a formalism for representing alternatives.
+		The first part of the thesis gives motivation (stemming from the real-world usage of CZSaw,
+		a visual analytics [VA] system), survey of several other VA systems,
+		prior work related to representing alternatives (including but not limited to: 
+		sofware configuration management, directed acyclic graphs, typed feature structures, AND/XOR trees),
+		and the methodology used to evaluate the formalism.
+		The second part of the thesis develops and present the basic design of the formalism 
+		(includes definitions of variations, variation heads, unification mechanisms, and variation spaces).
+		Of special interest is Chapter 6, which treats in depth the notions of 
+		variations (vs. more general {\em alternatives})
+		variation properties,
+		unbounded variation properties (one which has no information, i.e. its value is unknown),
+		variation spaces,
+		operations over variation heads (unification and subsumption),
+		unification of variation spaces, and
+		indices (variations within a variation space are ordered by their indices).		
+		\end{quote}
+
+
+\clearpage		
+\subsection{Design Alternatives ``in the Wild''}	
+
+
+%\clearpage
+\citeSK{davinci1485sforza}
+		\begin{quote}
+		\small
+		Study of an equestrian movement by da Vinci, intended to show Duke Francesco Sforza mounted on horseback.
+		The drawing features several regions of overlaid alternative details (with different positioning of parts),
+		thus allowing the viewer to imagine a number of different final outcomes.
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=0.99\textwidth]{figures/davinci1485sforza1a.jpg}
+		\caption{
+		%add
+		\citeauthor{davinci1485sforza}: 
+		\citetitle{davinci1485sforza} 
+		\cite{davinci1485sforza}.
+		Image adapted from: 
+		FriendsOfArt.com (\url{http://www.friendsofart.net/static/images/art1/leonardo-da-vinci-study-for-the-sforza-monument.jpg}).}		
+		\label{fig:davinci1485sforza}
+		\end{center}
+		\end{figure}		
+		\end{quote}
+
+\clearpage
+\citeSK{davinci1487vitruvian}
+		\begin{quote}
+		\small
+		Drawing of a male figure by da Vinci, based on human body proportions given in Book III of Vitruvius' {\em Ten Books on Architecture}. 
+		The drawing places two superimposed figures on a single sheet of paper,
+		thus depicting two alternative poses at the same time.
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=0.65\textwidth]{figures/davinci1487vitruvian.jpg}
+		\caption{
+		%add
+		\citeauthor{davinci1487vitruvian}: 
+		\citetitle{davinci1487vitruvian} 
+		\cite{davinci1487vitruvian}.
+		Source: Wikimedia Commons.}		
+		\label{fig:davinci1487vitruvian}
+		\end{center}
+		\end{figure}		
+		\end{quote}
+
+				
+\clearpage
+\citeSK{siza1977malagueira}
+		\begin{quote}
+		\small
+		This example of working with design alternatives 
+		shows multiple sketches done by \'Alvaro Joaquim de Melo Siza Vieira, 
+		a Portuguese architect, winner of the Pritzker Prize in 1992.
+		The project in question was called Bairro Quinta da Malagueira, 
+		a 27-hectare residential development project for around 12,000 people,
+		to the west of the city of \'Evora in Portugal.
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=0.85\textwidth]{figures/siza1977malagueira.jpg}
+		\caption{
+		Sketches and floorplans of house and patio variations by \'Alvaro Siza.
+		Left: 3D sketches. % (one-storey in upper half, two-storey in lower half). 
+		Right: Type 1: front patio toward the street. Type 2: patio at the back. 
+		\citeauthor{siza1977malagueira}: 
+		\citetitle{siza1977malagueira} 
+		\cite{siza1977malagueira}.
+		Sketches and floorplans adapted from 
+		\citeauthor{fleck1995siza}: 
+		\citetitle{fleck1995siza} 
+		\cite{fleck1995siza}.}		
+		\label{fig:siza1977malagueira}
+		\end{center}
+		\end{figure}
+		
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=0.7\textwidth]{figures/siza1977malagueira1.jpg}
+		\caption{
+		Completed project: \'Alvaro Siza's Quinta de Malagueira.
+		Photos adapted from 
+		\citeauthor{fleck1995siza}: 
+		\citetitle{fleck1995siza} 
+		\cite{fleck1995siza}.
+		}
+		\label{fig:siza1977malagueira1}
+		\end{center}
+		\end{figure}		
+				
+		\end{quote}
+
+
+\clearpage
+\citeSK{starck1990juicysalif}
+
+		\begin{quote}
+		\small
+		
+		This is a lemon/citrus squeezer for which the ideation was 
+		famously done in one single day, in a Corsican restaurant.
+		Figure \ref{fig:starck1990juicysalif2} shows the ideation sketched by Starck on a restaurant 
+		napkin/table mat, and Fig. \ref{fig:starck1990juicysalif} shows
+		the final manufactured artifact.
+		
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=0.99\textwidth]{figures/starck1990juicysalif2.jpg}
+		\caption{Philippe Starck's ideation for Juicy Salif citrus squeezer, done on a 
+		restaurant table mat; the sketches proceed in counterclockwise manner, starting
+		from the lower right corner \cite{lloyd2003philippe}.
+		Adapted from 
+		\url{http://alysapar22.wordpress.com/2010/06/29/expreienc-juicy-salif/}.}
+		\label{fig:starck1990juicysalif2}
+		\end{center}
+		\end{figure}		
+		
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=0.5\textwidth]{figures/starck1990juicysalif.jpg}
+		\caption{Completed artifact: Philippe Starck's {\em Juicy Salif} citrus squeezer.}
+		\label{fig:starck1990juicysalif}
+		\end{center}
+		\end{figure}		
+		
+		\end{quote}
+
+		
+\clearpage
+\citeSK{piano1998tjibaou}
+		\begin{quote}
+		\small
+		A cultural center completed in 1998, for which the architect created a number of preliminary sketches.
+		
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=0.99\textwidth]{figures/piano1998tjibaou1b.jpg}
+		\caption{
+		Sketches for
+		\citeauthor{piano1998tjibaou}: 
+		\citetitle{piano1998tjibaou} 
+		\cite{piano1998tjibaou}.		
+		Adapted from 
+		\citeauthor{jodidio2005renzo}: 
+		\citetitle{jodidio2005renzo} 
+		\cite{jodidio2005renzo}.
+		}		
+		\label{fig:piano1998tjibaou1}
+		\end{center}
+		\end{figure}		
+		
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=0.8\textwidth]{figures/piano1998tjibaou2.jpg}
+		\caption{
+		A completed building, within the complex.
+		\citeauthor{piano1998tjibaou}: 
+		\citetitle{piano1998tjibaou} 
+		\cite{piano1998tjibaou}.
+		Photo source: Wikimedia Commons.
+		}		
+		\label{fig:piano1998tjibaou2}
+		\end{center}
+		\end{figure}		
+		
+		\end{quote}
+				
+
+\clearpage
+\citeSK{gehry2003laphil}
+		\begin{quote}
+		\small
+		Designed by Frank Gehry and completed in 2003, this is the new home for
+		Los Angeles Philharmonic, with seating capacity of 2,265.
+		
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=0.99\textwidth]{figures/gehry2003laphil1.jpg}
+		\caption{
+		Variations of the auditorium model (on the back wall).
+		From the exhibition ``Frank O. Gehry since 1997'', Vitra Design Museum, Weil am Rhein, Germany.
+		\citeauthor{gehry2003laphil}: 
+		\citetitle{gehry2003laphil} 
+		\cite{gehry2003laphil}.
+		Photo adapted from source: 
+		\url{http://ca.phaidon.com/agenda/architecture/picture-galleries/2011/january/25/the-work-of-frank-gehry-from-1997-to-today/?idx=3}. 		
+		}		
+		\label{fig:gehry2003laphil}
+		\end{center}
+		\end{figure}		
+
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=0.99\textwidth]{figures/gehry2003laphil2.jpg}
+		\caption{
+		Completed building.
+		\citeauthor{gehry2003laphil}: 
+		\citetitle{gehry2003laphil} 
+		\cite{gehry2003laphil}.
+		Photo source: Wikimedia Commons. 
+		}		
+		\label{fig:gehry2003laphil2}
+		\end{center}
+		\end{figure}		
+				
+		\end{quote}
+
+
+		
+\clearpage
+\citeSK{calatrava2004turningtorso}
+		\begin{quote}
+		\small
+		The construction of this residential tower was completed in 2004 in Malm\"{o}, Sweden.
+		The architect, Santiago Calatrava, made a number of preliminary sketches
+		with alternative configurations, and appearances.
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=0.95\textwidth]{figures/calatrava2004turningtorso1.jpg}
+		\caption{
+		Multiple sketches made by Calatrava for the Turning Torso building.		
+% 		\citeauthor{calatrava2004turningtorso}: 
+% 		\citetitle{calatrava2004turningtorso} 
+% 		\cite{calatrava2004turningtorso}.
+		Material adapted from 
+		\citeauthor{jodidio2009calatrava}: 
+		\citetitle{jodidio2009calatrava} 
+		\cite{jodidio2009calatrava}.}		
+		\label{fig:calatrava2004turningtorso1}
+		\end{center}
+		\end{figure}
+		
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=0.7\textwidth]{figures/calatrava2004turningtorso2.jpg}
+		\caption{
+		Completed building.
+		\citeauthor{calatrava2004turningtorso}: 
+		\citetitle{calatrava2004turningtorso} 
+		\cite{calatrava2004turningtorso}.
+		Photo source: Wikimedia Commons. 
+		}		
+		\label{fig:calatrava2004turningtorso2}
+		\end{center}
+		\end{figure}		
+
+		\end{quote}
+				
+		
+\clearpage
+\citeSK{carusostjohn2005brickhouse}
+		\begin{quote}
+		\small
+		A family house completed in 2005 in London.
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=0.95\textwidth]{figures/carusostjohn2005brickhouse1.jpg}
+		\caption{
+		Several models (in this case, ten of them) were created before a choice on the final conceptual design has been made.
+		\citeauthor{carusostjohn2005brickhouse}: 
+		\citetitle{carusostjohn2005brickhouse} 
+		\cite{carusostjohn2005brickhouse}.
+		Photo source: 
+		\citeauthor{bell2010thenewmodernhouse}: 
+		\citetitle{bell2010thenewmodernhouse} 
+		\cite{bell2010thenewmodernhouse}. 
+		}		
+		\label{fig:carusostjohn2005brickhouse1}
+		\end{center}
+		\end{figure}
+				
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=0.7\textwidth]{figures/carusostjohn2005brickhouse2.jpg}
+		\caption{
+		Completed house, interior view.
+		\citeauthor{carusostjohn2005brickhouse}: 
+		\citetitle{carusostjohn2005brickhouse} 
+		\cite{carusostjohn2005brickhouse}.
+		Photo source: \url{http://www.carusostjohn.com/projects/brick-house/}.
+		}		
+		\label{fig:carusostjohn2005brickhouse2}
+		\end{center}
+		\end{figure}
+		
+		\end{quote}
+		
+
+\clearpage
+\citeSK{calatrava2005chicagospire}
+		\begin{quote}
+		\small
+		A residential tower design (not built) by Santiago Calatrava.
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=0.90\textwidth]{figures/calatrava2005chicagospire1.jpg}
+		\caption{
+		A number of sketches were made by Calatrava before a choice on the final design has been decided on.
+		\citeauthor{calatrava2005chicagospire}: 
+		\citetitle{calatrava2005chicagospire} 
+		\cite{calatrava2005chicagospire}.
+		Sketches adapted from: 
+		\citeauthor{jodidio2009calatrava}: 
+		\citetitle{jodidio2009calatrava} 
+		\cite{jodidio2009calatrava}. 
+		}		
+		\label{fig:jodidio2009calatrava1}
+		\end{center}
+		\end{figure}
+				
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=0.99\textwidth]{figures/calatrava2005chicagospire2.jpg}
+		\caption{
+		Tower rendering, view.
+		\citeauthor{calatrava2005chicagospire}: 
+		\citetitle{calatrava2005chicagospire} 
+		\cite{calatrava2005chicagospire}.
+		Rendering adapted from: Wikipedia.
+		}		
+		\label{fig:calatrava2005chicagospire2}
+		\end{center}
+		\end{figure}
+		
+		\end{quote}
+		
+				
+
+\clearpage
+\citeSK{broekx2006lenaerts}
+		\begin{quote}
+		\small
+		This is a detached single-family residence project completed in 2006.		
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=0.60\textwidth]{figures/broekx2006lenaerts1.jpg}
+		\caption{
+		Top: preliminary multiple sketches, done on a single sheet of paper.
+		Bottom: a progression of models showing evolution of the massing.
+		\citeauthor{broekx2006lenaerts}: 
+		\citetitle{broekx2006lenaerts} 
+		\cite{broekx2006lenaerts}.
+		Photo source: 
+		\citeauthor{carusostjohn2005brickhouse}: 
+		\citetitle{carusostjohn2005brickhouse} 
+		\cite{bell2010thenewmodernhouse}. 
+		}		
+		\label{fig:broekx2006lenaerts1}
+		\end{center}
+		\end{figure}
+				
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=0.99\textwidth]{figures/broekx2006lenaerts2.jpg}
+		\caption{
+		Completed house.
+		\citeauthor{broekx2006lenaerts}: 
+		\citetitle{broekx2006lenaerts} 
+		\cite{broekx2006lenaerts}.
+		Photo source: \url{http://www.vai.be/en/project/lenaerts-thijs-house}.
+		}		
+		\label{fig:broekx2006lenaerts2}
+		\end{center}
+		\end{figure}
+		
+		\end{quote}
+		
+
+				
+% \clearpage
+% \citeSK{foster2006valerygergiev}
+% 		\begin{quote}
+% 		\small
+% 		This is a design proposal (Fig. \ref{fig:foster2006valerygergiev}) 
+% 		by Martha Tsigkari (Foster+Partners) for a cultural centre to be built in
+% 		Vladikavkaz, North Ossetia. Four separate buildings (music school, library and 
+% 		two concert venues) that are variations of one single conceptual idea (i.e. river pebbles). 
+% 		These four different (but related) building designs were produced using one single 
+% 		parametric CAD model.
+% 		
+% 		\begin{figure}[htb]
+% 		\begin{center}
+% 		\includegraphics[width=0.8\textwidth]{figures/foster2006valerygergiev1.jpg}
+% 		%\includegraphics[width=0.45\textwidth]{figures/foster2006valerygergiev2.jpg}
+% 		\caption{Martha Tsigkari's Valery Gergiev Cultural Centre.
+% 		This is a complex 
+% 		consisting of four buildings, % (music school, library, two concert halls), 
+% 		all variations of a single conceptual idea.
+% 		\citeauthor{foster2006valerygergiev}: 
+% 		\citetitle{foster2006valerygergiev} 
+% 		\cite{foster2006valerygergiev}.
+% 		Photo source: Wikimedia Commons. 
+% 		}		
+% 		\label{fig:foster2006valerygergiev}
+% 		\end{center}
+% 		\end{figure}
+% 				
+% 		\begin{figure}[htb]
+% 		\begin{center}
+% 		\includegraphics[width=0.8\textwidth]{figures/foster2006valerygergiev2.jpg}
+% 		\caption{
+% 		Completed complex (rendering).
+% 		\citeauthor{foster2006valerygergiev}: 
+% 		\citetitle{foster2006valerygergiev} 
+% 		\cite{foster2006valerygergiev}.
+% 		}		
+% 		\label{fig:foster2006valerygergiev2}
+% 		\end{center}
+% 		\end{figure}
+% 		
+% 		\end{quote}
+		
+		
+\clearpage
+\citeSK{gehry2007iac}
+		\begin{quote}
+		\small
+		Headquarters for the InterActiveCorp, Inc., located in Manhattan, New York City, and completed in 2007.
+		%, this office building gives an impression of a two-storey building, but in reality has ten stories.
+		
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=0.99\textwidth]{figures/gehry2007iac1.jpg}
+		\caption{
+		Variations of the building model.
+		From the exhibition ``Frank O. Gehry since 1997'', Vitra Design Museum, Weil am Rhein, Germany. 
+		\citeauthor{gehry2007iac}: 
+		\citetitle{gehry2007iac} 
+		\cite{gehry2007iac}.
+		Photo source: \url{http://ca.phaidon.com/agenda/architecture/picture-galleries/2011/january/25/the-work-of-frank-gehry-from-1997-to-today/?idx=4}.		
+		}		
+		\label{fig:gehry2007iac}
+		\end{center}
+		\end{figure}		
+		
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=0.99\textwidth]{figures/gehry2007iac2.jpg}
+		\caption{
+		Completed building.
+		\citeauthor{gehry2007iac}: 
+		\citetitle{gehry2007iac} 
+		\cite{gehry2007iac}.
+		Photo source: Wikimedia Commons.
+		}		
+		\label{fig:gehry2007iac2}
+		\end{center}
+		\end{figure}		
+		
+		\end{quote}
+
+\clearpage
+\citeSK{maleki2008reinterpreting}
+		\begin{quote}
+		\small
+		Ancient Persian domes which have delicate Islamic drawings projected onto them. 
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=0.6\textwidth]{figures/maleki2008reinterpreting.jpg}
+		\caption{
+		Several variations of Rasmi domes.
+		\citeauthor{maleki2008reinterpreting}: 
+		\citetitle{maleki2008reinterpreting} 
+		\cite{maleki2008reinterpreting}.}		
+		\label{fig:maleki2008reinterpreting}
+		\end{center}
+		\end{figure}		
+		\end{quote}
+					
+			
+\clearpage
+\citeSK{gehry2011sprucestreet}
+		\begin{quote}
+		\small
+		Also known as Beekman Tower, or 8 Spruce Street tower, or commercially as {\em New York by Gehry},
+		this mixed-use tower based in Lower Manhattan was completed in 2011. 
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=0.99\textwidth]{figures/gehry2011sprucestreet1.jpg}
+		\caption{
+		Variations of the tower model.
+		From the exhibition ``Frank O. Gehry since 1997'', Vitra Design Museum, Weil am Rhein, Germany.
+		\citeauthor{gehry2011sprucestreet}: 
+		\citetitle{gehry2011sprucestreet} 
+		\cite{gehry2011sprucestreet}.
+		Photo adapted from source: 
+		\url{http://ca.phaidon.com/agenda/architecture/picture-galleries/2011/january/25/the-work-of-frank-gehry-from-1997-to-today/?idx=3}.
+		}		
+		\label{fig:gehry2011sprucestreet}
+		\end{center}
+		\end{figure}		
+		
+		\begin{figure}[htb]
+		\begin{center}
+		\includegraphics[width=0.4\textwidth]{figures/gehry2011sprucestreet2.jpg}
+		\caption{
+		Completed building.
+		\citeauthor{gehry2011sprucestreet}: 
+		\citetitle{gehry2011sprucestreet} 
+		\cite{gehry2011sprucestreet}.
+		Photo source: Wikimedia Commons.
+		}		
+		\label{fig:gehry2011sprucestreet2}
+		\end{center}
+		\end{figure}		
+		
+		\end{quote}
+
+		
+
+						

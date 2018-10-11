@@ -1,0 +1,48 @@
+
+\usepackage[lflt]{floatflt}
+
+\usepackage[font=small]{caption}%\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{afterpage}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{fit}
+
+
+\usepackage{url}
+\usepackage{booktabs}
+
+\usepackage{supertabular}
+\usepackage{biblatex}
+\bibliography{ann-bib}
+\newcommand*{\citeSK}[1]{
+	\noindent
+	\cite{#1} 
+	\fullcite{#1} 
+% 	\citeauthor{#1}: 
+% 	\citetitle{#1} (\citeyear{#1})
+% 		\begin{quote}
+% 		\citefield{#1}{annotation} 
+% 		\end{quote}
+% 	\begin{quote}
+% 	{\bf Cites}: \citefield{#1}{verba}. 
+% 	\citefield{#1}{annotation} 
+% 	\cite{#1} 
+% 	\end{quote}
+}
+\newcommand*{\citeSKextended}[2]{ % #2 = for "Ch. 5", and similar
+	\noindent
+	\cite{#1} 
+	\citeauthor{#1}: 
+	\citetitle{#1} (\citeyear{#1}) {#2}
+% 	\begin{quote}
+% 	{\bf Cites}: \citefield{#1}{verba}. 
+% 	\citefield{#1}{annotation} 
+% 	\cite{#1} 
+% 	\end{quote}
+}
+
+
+\usepackage{hyperref}
